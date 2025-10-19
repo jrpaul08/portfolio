@@ -1,6 +1,6 @@
-# Data Scientist Portfolio
+# My Data Science Portfolio
 
-A modern, responsive React portfolio website designed specifically for data scientists. This portfolio showcases professional skills, projects, and technical expertise in a clean, minimalist design.
+My personal portfolio showcasing my work, skills, and projects in data science and software development.
 
 ## Features
 
