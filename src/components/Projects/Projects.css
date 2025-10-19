@@ -1,0 +1,141 @@
+.projects {
+  background: #1F2937;
+  color: white;
+  padding: 100px 0;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projects-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #D1D5DB;
+}
+
+.add-button {
+  width: 40px;
+  height: 40px;
+  background: #374151;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-divider {
+  height: 1px;
+  background: #F59E0B;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.project-info {
+  padding-right: 0;
+}
+
+.project-title {
+  margin-bottom: 20px;
+}
+
+.project-tools {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #D1D5DB;
+  margin-bottom: 5px;
+}
+
+.project-name {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #D1D5DB;
+  line-height: 1.2;
+}
+
+.project-description {
+  font-size: 17px;
+  color: #D1D5DB;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.project-teaser {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.project-teaser a {
+  text-decoration: none;
+}
+
+.teaser-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #F59E0B;
+  margin: 0;
+  font-style: italic;
+}
+
+.project-cta {
+  font-size: 14px;
+  padding: 12px 24px;
+}
+
+.project-dashboard-image {
+  width: 150%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin-left: -10%;
+}
+
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 60px 0;
+  }
+  
+  .project-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .project-info {
+    padding-right: 0;
+  }
+  
+  .project-dashboard-image {
+    min-height: 250px;
+  }
+  
+  .teaser-text {
+    font-size: 16px;
+  }
+  
+  .project-teaser {
+    gap: 12px;
+  }
+}
+

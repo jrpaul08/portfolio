@@ -1,0 +1,195 @@
+.hero {
+  padding: 120px 0 80px;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-circle {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: #F3F4F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: scale(1.0);
+  border-radius: 50%;
+}
+
+.hero-text {
+  padding-left: 20px;
+}
+
+.hero-greeting {
+  font-size: 24px;
+  color: #6B7280;
+  margin-bottom: 15px;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.hero-name {
+  font-size: 72px;
+  font-weight: bold;
+  color: #1F2937;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.hero-title {
+  font-size: 48px;
+  color: #1F2937;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.hero-contact-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.hero-contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #3B82F6, #EC4899);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hero-contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-cta {
+  font-size: 16px;
+  padding: 15px 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .profile-circle {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .hero-name {
+    font-size: 56px;
+  }
+  
+  .hero-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 60px;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .hero-text {
+    padding-left: 0;
+  }
+  
+  .profile-circle {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .hero-greeting {
+    font-size: 20px;
+  }
+  
+  .hero-name {
+    font-size: 42px;
+  }
+  
+  .hero-title {
+    font-size: 28px;
+  }
+  
+  .hero-contact-buttons {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .hero-contact-btn {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .contact-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .hero-cta {
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+}
