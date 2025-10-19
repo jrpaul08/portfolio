@@ -19,23 +19,6 @@ A modern, responsive React portfolio website designed specifically for data scie
 - Responsive design principles
 - Modern web standards
 
-## Customization
-
-### Personal Information
-- Update the hero section with your name, title, and profile picture
-- Modify the about section with your personal background
-- Replace the featured project with your own work
-
-### Styling
-- Colors can be customized in the CSS files
-- Fonts and spacing can be adjusted in the global styles
-- Component-specific styles are in individual CSS files
-
-### Content
-- Update the proficiencies section with your specific skills
-- Add your own projects to the projects section
-- Modify the tools section with your technology stack
-
 ## Project Structure
 
 ```
