@@ -4,13 +4,12 @@ My personal portfolio showcasing my work, skills, and projects in data science a
 
 ## Features
 
-- **Hero Section**: Professional introduction with profile picture and call-to-action
+- **Hero Section**: Professional introduction with profile picture
 - **About Section**: Personal background and professional journey
 - **Proficiencies**: Six key skill areas with detailed descriptions
-- **Featured Projects**: Showcase of data science projects with interactive dashboard preview
+- **Featured Projects**: Showcase of data science projects
 - **Tools & Technologies**: Visual display of technical stack and favorite tools
 - **Responsive Design**: Optimized for all device sizes
-- **Modern UI**: Clean, professional aesthetic with smooth animations
 
 ## Technologies Used
 
