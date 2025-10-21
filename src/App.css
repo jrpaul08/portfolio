@@ -76,11 +76,11 @@ body {
 
 /* Section spacing */
 .section {
-  padding: 60px 0;
+  padding: 40px 0;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
 }

@@ -7,11 +7,13 @@ const Header: React.FC = () => {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <img 
-              src="/assets/profile/signature.jpg" 
-              alt="Jared Paul Signature" 
-              className="logo-signature"
-            />
+            <a href="#hero" className="logo-link">
+              <img 
+                src="/assets/profile/signature.jpg" 
+                alt="Jared Paul Signature" 
+                className="logo-signature"
+              />
+            </a>
           </div>
           <nav className="nav">
             <a href="#about" className="nav-link">About</a>

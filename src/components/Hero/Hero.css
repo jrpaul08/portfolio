@@ -1,11 +1,11 @@
 .hero {
   padding: 0;
   background: white;
-  height: 100vh;
+  height: 105vh;
   display: flex;
   align-items: center;
   margin-top: -80px;
-  padding-top: 80px;
+  padding-top: 150px;
 }
 
 .hero-content {

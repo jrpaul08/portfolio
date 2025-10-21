@@ -1,7 +1,7 @@
 .projects {
   background: #1F2937;
   color: white;
-  padding: 100px 0;
+  padding: 60px 0;
   margin-left: -20px;
   width: calc(100% + 40px);
 }
@@ -19,7 +19,7 @@
 }
 
 .projects-title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: bold;
   color: #D1D5DB;
 }
@@ -47,8 +47,8 @@
 
 .project-content {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 40px;
   align-items: start;
 }
 
@@ -62,32 +62,32 @@
 
 .project-tools {
   display: block;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: #D1D5DB;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 
 .project-name {
   display: block;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #D1D5DB;
   line-height: 1.2;
 }
 
 .project-description {
-  font-size: 17px;
+  font-size: 14px;
   color: #D1D5DB;
-  line-height: 1.7;
-  margin-bottom: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
   font-weight: 400;
 }
 
 .project-teaser {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   align-items: flex-start;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .teaser-text {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: #F59E0B;
   margin: 0;
@@ -104,18 +104,18 @@
 }
 
 .project-cta {
-  font-size: 14px;
-  padding: 12px 24px;
+  font-size: 12px;
+  padding: 10px 20px;
 }
 
 .project-dashboard-image {
-  width: 150%;
+  width: 200%;
   height: auto;
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   display: block;
-  margin-left: -10%;
+  margin-left: 10%;
 }
 
 
