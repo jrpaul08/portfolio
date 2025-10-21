@@ -19,9 +19,9 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
         <div className="project-content">
           <div className="project-info">
             <h3 className="project-title">
-              <span className="project-tools">PYTHON | PYTORCH | DEEP LEARNING</span>
               <span className="project-name">MULTI-LABEL CHEST X-RAY</span>
               <span className="project-name">CLASSIFICATION</span>
+              <span className="project-tools">CNN | Multi-class Classification | Capstone Project</span>
             </h3>
             <p className="project-description">
               Developed a deep learning model for multi-label chest X-ray classification to detect 13 thoracic diseases from medical images. Built with a MobileNetV2 architecture and enhanced through data augmentation, class rebalancing, and dynamic thresholding, the model achieved 62% accuracy and 58% recall despite limited resources, demonstrating a strong starting point for real-world diagnostic support. The system includes bounding box visualizations to highlight abnormalities and a diagnostic report generator summarizing predicted conditions with related symptoms and treatments.
@@ -51,9 +51,9 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
         <div className="project-content">
           <div className="project-info">
             <h3 className="project-title">
-              <span className="project-tools">PYTHON | PANDAS | MATPLOTLIB</span>
               <span className="project-name">RETAIL CUSTOMER</span>
               <span className="project-name">SEGMENTATION USING RFM ANALYSIS</span>
+              <span className="project-tools">K-means Clustering | Business Intelligence</span>
             </h3>
             <p className="project-description">
               Performed an RFM (Recency, Frequency, Monetary) analysis of retail customer data to uncover actionable customer segments. Through segmentation based on purchasing behavior, RFM analysis enables data-driven marketing decisions; supporting personalized outreach, improved retention of valuable customers, early identification of churn risks, and optimized allocation of marketing efforts to increase profitability. Built an interactive dashboard to present findings and cluster-level KPIs for business stakeholders.
@@ -78,8 +78,8 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
         <div className="project-content">
           <div className="project-info">
             <h3 className="project-title">
-              <span className="project-tools">PYTHON | MACHINE LEARNING | WEB SCRAPING</span>
               <span className="project-name">NBA ORACLE</span>
+              <span className="project-tools">Webscraping | Time-series Modelling | Personal Interest</span>
             </h3>
             <p className="project-description">
               Developed an end-to-end machine learning pipeline to predict NBA game outcomes using historical data from Basketball Reference. Implemented asynchronous web scraping, feature engineering, and time-series modeling on over 3,400 games across three seasons. Trained a Ridge Classifier optimized with sequential feature selection and cross-validation, achieving 71% prediction accuracy. This project demonstrates expertise in data engineering, sports analytics, and time-series machine learning, providing a scalable foundation for real-time game forecasting.

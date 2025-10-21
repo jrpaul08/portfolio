@@ -17,7 +17,9 @@ const Tools: React.FC = () => {
     <section id="tools" className="tools section">
       <div className="container">
         <div className="tools-header">
-          <h2 className="tools-title">My Data Science Stack</h2>
+          <p className="tools-subtitle">Here is my</p>
+          <h2 className="tools-title">Data Science Stack</h2>
+          <hr className="gradient-line" />
         </div>
         <div className="tools-grid">
           {tools.map((tool, index) => (

@@ -2,8 +2,7 @@
   background: #1F2937;
   color: white;
   padding: 60px 0;
-  margin-left: -20px;
-  width: calc(100% + 40px);
+  overflow-x: hidden;
 }
 
 .projects .container {
@@ -19,7 +18,7 @@
 }
 
 .projects-title {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: bold;
   color: #D1D5DB;
 }
@@ -47,7 +46,7 @@
 
 .project-content {
   display: grid;
-  grid-template-columns: 2fr 1.2fr;
+  grid-template-columns: 1.8fr 1.2fr;
   gap: 40px;
   align-items: start;
 }
@@ -62,10 +61,10 @@
 
 .project-tools {
   display: block;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   color: #D1D5DB;
-  margin-bottom: 3px;
+  margin-top: 8px;
 }
 
 .project-name {
