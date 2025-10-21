@@ -1,17 +1,19 @@
 .hero {
-  padding: 120px 0 80px;
+  padding: 0;
   background: white;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  margin-top: -80px;
+  padding-top: 80px;
 }
 
 .hero-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -21,8 +23,8 @@
 }
 
 .profile-circle {
-  width: 450px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background: #F3F4F6;
   display: flex;
@@ -46,26 +48,26 @@
 }
 
 .hero-greeting {
-  font-size: 24px;
+  font-size: 18px;
   color: #6B7280;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-weight: 400;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
 .hero-name {
-  font-size: 72px;
+  font-size: 56px;
   font-weight: bold;
   color: #1F2937;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   line-height: 1.1;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 }
 
 .hero-title {
-  font-size: 48px;
+  font-size: 36px;
   color: #1F2937;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: 500;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
 }

@@ -2,8 +2,8 @@
   background: white;
   position: relative;
   overflow: hidden;
-  padding-top: 200px;
-  padding-bottom: 120px;
+  padding-top: 100px;
+  padding-bottom: 80px;
 }
 
 .proficiencies::before {
@@ -20,7 +20,7 @@
 
 .proficiencies-header {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -58,9 +58,9 @@
 
 .proficiencies-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 1;

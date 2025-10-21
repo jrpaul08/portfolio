@@ -6,7 +6,6 @@ import About from './components/About/About';
 import Proficiencies from './components/Proficiencies/Proficiencies';
 import Projects from './components/Projects/Projects';
 import Tools from './components/Tools/Tools';
-import Contact from './components/Contact/Contact';
 import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
       <Proficiencies />
       <Projects onProjectClick={showProjectDetail} />
       <Tools />
-      <Contact />
     </div>
   );
 }

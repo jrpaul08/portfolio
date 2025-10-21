@@ -26,8 +26,8 @@ const Hero: React.FC = () => {
               <a href="https://github.com/jrpaul08" target="_blank" rel="noopener noreferrer" className="hero-contact-btn">
                 <img src="/assets/profile/github.png" alt="GitHub" className="contact-icon" />
               </a>
-              <a href="#contact" className="hero-contact-btn">
-                <img src="/assets/profile/contact.png" alt="Contact" className="contact-icon" />
+              <a href="/assets/profile/JP_Resume.pdf" target="_blank" rel="noopener noreferrer" className="hero-contact-btn">
+                <img src="/assets/profile/resume.png" alt="Resume" className="contact-icon" />
               </a>
             </div>
           </div>

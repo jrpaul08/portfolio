@@ -18,7 +18,6 @@ const Header: React.FC = () => {
             <a href="#proficiencies" className="nav-link">Proficiencies</a>
             <a href="#projects" className="nav-link">Projects</a>
             <a href="#tools" className="nav-link">Stack</a>
-            <a href="#contact" className="nav-link">Contact</a>
           </nav>
         </div>
       </div>
