@@ -2,6 +2,13 @@
   background: #1F2937;
   color: white;
   padding: 100px 0;
+  margin-left: -20px;
+  width: calc(100% + 40px);
+}
+
+.projects .container {
+  margin: 0;
+  padding: 0 60px;
 }
 
 .projects-header {
