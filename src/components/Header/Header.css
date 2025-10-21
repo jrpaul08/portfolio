@@ -28,6 +28,18 @@
   padding-left: 40px;
 }
 
+.logo-link {
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  display: inline-block;
+  height: 100%;
+  width: auto;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
 .logo-signature {
   height: 100%;
   max-width: 280px;

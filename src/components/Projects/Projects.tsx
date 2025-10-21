@@ -12,9 +12,6 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
       <div className="container">
         <div className="projects-header">
           <h2 className="projects-title">Featured Projects</h2>
-          <div className="projects-add">
-            <button className="add-button">+</button>
-          </div>
         </div>
         <hr className="projects-divider" />
         
