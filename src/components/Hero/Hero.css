@@ -39,7 +39,6 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  transform: scale(1.0);
   border-radius: 50%;
 }
 
@@ -128,21 +127,6 @@
   display: inline-block;
 }
 
-@media (max-width: 1024px) {
-  .profile-circle {
-    width: 350px;
-    height: 350px;
-  }
-  
-  .hero-name {
-    font-size: 56px;
-  }
-  
-  .hero-title {
-    font-size: 36px;
-  }
-}
-
 @media (max-width: 768px) {
   .hero {
     height: auto;
@@ -165,10 +149,6 @@
   .profile-circle {
     width: 250px;
     height: 250px;
-  }
-  
-  .hero-greeting {
-    font-size: 18px;
   }
   
   .hero-name {

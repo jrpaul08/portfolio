@@ -412,6 +412,7 @@
     font-size: 12px;
   }
 }
+
 /* Zoomed out styles */
 .project-detail.zoomed-out {
   min-height: auto;
