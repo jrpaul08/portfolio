@@ -73,29 +73,70 @@
 }
 
 @media (max-width: 768px) {
+  .tools {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .tools-header {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+  
+  .tools-subtitle {
+    font-size: 14px;
+  }
+  
   .tools-title {
-    font-size: 42px;
+    font-size: 32px;
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0 20px;
+  }
+  
+  .tool-card {
+    padding: 15px 10px;
+  }
+  
+  .tool-logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .tool-name {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-header {
+    padding: 0 15px;
+  }
+  
+  .tools-title {
+    font-size: 28px;
   }
   
   .tools-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 12px;
+    padding: 0 15px;
   }
   
   .tool-card {
-    padding: 20px 15px;
+    padding: 12px 8px;
   }
   
   .tool-logo {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .tool-emoji {
-    font-size: 30px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 10px;
   }
   
   .tool-name {
-    font-size: 14px;
+    font-size: 11px;
   }
 }

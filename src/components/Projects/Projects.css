@@ -120,12 +120,20 @@
 
 @media (max-width: 768px) {
   .projects {
-    padding: 60px 0;
+    padding: 50px 0;
+  }
+  
+  .projects .container {
+    padding: 0 20px;
+  }
+  
+  .projects-title {
+    font-size: 32px;
   }
   
   .project-content {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
   
   .project-info {
@@ -133,15 +141,45 @@
   }
   
   .project-dashboard-image {
-    min-height: 250px;
+    width: 100%;
+    margin-left: 0;
+    min-height: auto;
+    border-radius: 8px;
+  }
+  
+  .project-name {
+    font-size: 16px;
+  }
+  
+  .project-description {
+    font-size: 13px;
   }
   
   .teaser-text {
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .project-teaser {
     gap: 12px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects .container {
+    padding: 0 15px;
+  }
+  
+  .projects-title {
+    font-size: 28px;
+  }
+  
+  .project-name {
+    font-size: 15px;
+  }
+  
+  .project-description {
+    font-size: 12px;
   }
 }
 

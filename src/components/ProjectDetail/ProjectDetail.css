@@ -345,6 +345,73 @@
   }
 }
 
+@media (max-width: 480px) {
+  .project-detail {
+    padding-top: 80px;
+  }
+  
+  .project-detail-container {
+    padding: 0 12px;
+  }
+  
+  .back-button {
+    padding: 10px 18px;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  
+  .project-detail-title {
+    font-size: 24px;
+  }
+  
+  .project-detail-header {
+    margin-bottom: 40px;
+  }
+  
+  .project-detail-overview,
+  .project-detail-section,
+  .project-detail-dashboard {
+    padding: 20px 15px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+  
+  .project-detail-description {
+    font-size: 14px;
+  }
+  
+  .section-list li {
+    font-size: 13px;
+    padding-left: 20px;
+  }
+  
+  .tool-tag {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+  
+  .image-item {
+    padding: 12px;
+  }
+  
+  .image-caption {
+    font-size: 12px;
+  }
+  
+  .cluster-label {
+    font-size: 14px;
+  }
+  
+  .cluster-description {
+    font-size: 13px;
+  }
+  
+  .cluster-strategy {
+    font-size: 12px;
+  }
+}
 /* Zoomed out styles */
 .project-detail.zoomed-out {
   min-height: auto;

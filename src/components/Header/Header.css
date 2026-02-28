@@ -69,11 +69,47 @@
 }
 
 @media (max-width: 768px) {
+  .header-content {
+    padding: 15px 20px 15px 0;
+  }
+  
+  .logo {
+    height: 60px;
+    padding-left: 15px;
+  }
+  
+  .logo-signature {
+    max-width: 200px;
+  }
+  
   .nav {
-    gap: 20px;
+    gap: 15px;
   }
   
   .nav-link {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    padding: 10px 15px 10px 0;
+  }
+  
+  .logo {
+    height: 50px;
+    padding-left: 10px;
+  }
+  
+  .logo-signature {
+    max-width: 150px;
+  }
+  
+  .nav {
+    gap: 10px;
+  }
+  
+  .nav-link {
+    font-size: 12px;
   }
 }
