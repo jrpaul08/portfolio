@@ -122,3 +122,46 @@ body {
     padding: 0 15px;
   }
 }
+
+/* Zoomed out styles - content-based heights, preserve original widths */
+.App.zoomed-out .hero {
+  height: auto;
+  min-height: 700px;
+  padding-top: 280px;
+  padding-bottom: 60px;
+}
+
+.App.zoomed-out .about {
+  padding-bottom: 80px;
+  margin-bottom: 40px;
+}
+
+.App.zoomed-out .proficiencies {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.App.zoomed-out .projects {
+  padding: 40px 0;
+}
+
+.App.zoomed-out .tools {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.App.zoomed-out .contact {
+  padding: 60px 0;
+}
+
+/* Zoomed in styles - stack layouts to prevent content being cut off */
+.App.zoomed-in .project-content {
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.App.zoomed-in .project-dashboard-image {
+  width: 100%;
+  margin-left: 0;
+  max-width: 600px;
+}
