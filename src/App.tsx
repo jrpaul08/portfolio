@@ -7,9 +7,11 @@ import Proficiencies from './components/Proficiencies/Proficiencies';
 import Projects from './components/Projects/Projects';
 import Tools from './components/Tools/Tools';
 import ProjectDetail from './components/ProjectDetail/ProjectDetail';
+import { useZoomLevel } from './hooks/useZoomLevel';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const { isZoomedOut, isZoomedIn } = useZoomLevel();
 
   const showProjectDetail = () => {
     setCurrentPage('project');
@@ -32,8 +34,10 @@ function App() {
     return <ProjectDetail onBack={showHome} />;
   }
 
+  const zoomClass = isZoomedOut ? 'zoomed-out' : isZoomedIn ? 'zoomed-in' : '';
+
   return (
-    <div className="App">
+    <div className={['App', zoomClass].filter(Boolean).join(' ')}>
       <Header />
       <Hero />
       <About />

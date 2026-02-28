@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react';
 import './ProjectDetail.css';
+import { useZoomLevel } from '../../hooks/useZoomLevel';
 
 interface ProjectDetailProps {
   onBack: () => void;
 }
 
 const ProjectDetail: React.FC<ProjectDetailProps> = ({ onBack }) => {
+  const { isZoomedOut } = useZoomLevel();
+
   useEffect(() => {
-    // Load page at the top instantly
     window.scrollTo(0, 0);
   }, []);
 
+  const zoomClass = isZoomedOut ? 'zoomed-out' : '';
+
   return (
-    <div className="project-detail">
+    <div className={['project-detail', zoomClass].filter(Boolean).join(' ')}>
       <div className="project-detail-container">
         <button className="back-button" onClick={onBack}>
           ← Back to Portfolio
