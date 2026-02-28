@@ -189,54 +189,83 @@
 
 @media (max-width: 768px) {
   .proficiencies {
-    padding: 60px 0;
+    padding: 50px 0;
+  }
+  
+  .proficiencies-header {
+    padding: 0 20px;
+  }
+  
+  .proficiencies-subtitle {
+    font-size: 14px;
   }
   
   .proficiencies-title {
-    font-size: 42px;
+    font-size: 32px;
   }
   
   .proficiencies-description {
-    font-size: 16px;
+    font-size: 15px;
   }
   
   .proficiencies-container {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 10px;
-  }
-  
-  .proficiency-card {
-    padding: 25px 20px;
-  }
-  
-  .proficiency-header {
-    flex-direction: column;
-    text-align: center;
     gap: 15px;
-  }
-  
-  .proficiency-icon {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .proficiency-image {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .proficiency-title {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .proficiencies-container {
-    padding: 0 5px;
+    padding: 0 20px;
   }
   
   .proficiency-card {
     padding: 20px 15px;
+  }
+  
+  .proficiency-header {
+    flex-direction: row;
+    text-align: left;
+    gap: 12px;
+  }
+  
+  .proficiency-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .proficiency-image {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .proficiency-title {
+    font-size: 16px;
+  }
+  
+  .proficiency-description {
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .proficiencies-header {
+    padding: 0 15px;
+  }
+  
+  .proficiencies-title {
+    font-size: 28px;
+  }
+  
+  .proficiencies-container {
+    padding: 0 15px;
+  }
+  
+  .proficiency-card {
+    padding: 15px 12px;
+  }
+  
+  .proficiency-title {
+    font-size: 15px;
+  }
+  
+  .proficiency-description {
+    font-size: 12px;
   }
 }
