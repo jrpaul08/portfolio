@@ -11,13 +11,16 @@ const About: React.FC = () => {
           <hr className="gradient-line" />
           <div className="about-text">
             <p>
-              Driven by curiosity and a love for problem-solving, I'm a Software Engineering graduate passionate about uncovering insights and creating impact through data. My journey into data science and machine learning began with a fascination for how data can reveal patterns, tell stories, and guide meaningful decisions.
+              I started out in software engineering, writing code and watching it come to life in the hands of real users. But I kept finding myself more drawn to the numbers behind the product than the product itself, and that curiosity pulled me toward data science!
             </p>
             <p>
-              What draws me to this field is its constant evolution, combining analytical thinking, creativity, and continuous learning. I'm excited by the challenge of transforming data into solutions that push boundaries and drive innovation.
+              That said, data can be very messy, and often you find yourself knee deep in uncertainty before any of it starts to make sense. But underneath all the noise, the data has a story worth telling, and that makes every bit of the mess worth it. And machine learning is where it all comes full circle for me, building systems that are powered by data, trained on patterns, and built to uncover something meaningful.
             </p>
             <p>
-              Outside of my work, I enjoy staying active through sports, workouts, and outdoor activities. I also love reading and exploring new ideas as I strive to maintain a healthy and well-rounded lifestyle.
+              Away from the screen, I like to stay active whether it's playing sports or just out for a walk. And when I do sit down, it's usually with a book, and right now I'm hooked on the Dune series!
+            </p>
+            <p>
+              So here I am, a Software Engineering graduate turned data science enthusiast, chasing problems worth solving and insights worth sharing.
             </p>
           </div>
         </div>

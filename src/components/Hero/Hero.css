@@ -66,9 +66,30 @@
 .hero-title {
   font-size: 36px;
   color: #1F2937;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   font-weight: 500;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.hero-tagline {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: 0.3px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #64748b;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.hero-tagline::before {
+  content: '— ';
+  color: #e11d48;
+}
+
+.tagline-emphasis {
+  font-style: italic;
 }
 
 .hero-contact-buttons {
@@ -159,6 +180,11 @@
     font-size: 24px;
   }
   
+  .hero-tagline {
+    font-size: 16px;
+    white-space: normal;
+  }
+  
   .hero-contact-buttons {
     justify-content: center;
     gap: 12px;
@@ -196,6 +222,10 @@
   
   .hero-title {
     font-size: 20px;
+  }
+  
+  .hero-tagline {
+    font-size: 14px;
   }
   
   .hero-contact-btn {
