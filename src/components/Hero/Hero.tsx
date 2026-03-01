@@ -19,6 +19,7 @@ const Hero: React.FC = () => {
             <p className="hero-greeting">Hello, I'm</p>
             <h1 className="hero-name">Jared Paul</h1>
             <h2 className="hero-title">Data Scientist</h2>
+            <p className="hero-tagline">turning <span className="tagline-emphasis">past patterns</span> into <span className="tagline-emphasis">future possibilities</span></p>
             <div className="hero-contact-buttons">
               <a href="https://www.linkedin.com/in/paulj08" target="_blank" rel="noopener noreferrer" className="hero-contact-btn">
                 <img src="/assets/profile/linkedIn.png" alt="LinkedIn" className="contact-icon" />

@@ -10,7 +10,9 @@ const Tools: React.FC = () => {
     { name: 'Seaborn', image: '/assets/tools/seaborn.png' },
     { name: 'Matplotlib', image: '/assets/tools/matplotlib.png' },
     { name: 'PyTorch', image: '/assets/tools/pytorch.png' },
-    { name: 'PostgreSQL', image: '/assets/tools/postgres-sql.png' }
+    { name: 'PostgreSQL', image: '/assets/tools/postgres-sql.png' },
+    { name: 'Apache Spark', image: '/assets/tools/apache_spark-icon.svg' },
+    { name: 'Docker', image: '/assets/tools/docker-tile.svg' }
   ];
 
   return (
