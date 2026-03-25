@@ -171,8 +171,17 @@ body {
   gap: 30px;
 }
 
-.App.zoomed-in .project-dashboard-image {
-  width: 100%;
-  margin-left: 0;
-  max-width: 600px;
+.App.zoomed-in .project-preview-card {
+  max-width: min(920px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.App.zoomed-in .project-preview-card-image {
+  max-height: min(800px, 80vh);
+}
+
+.App.zoomed-in .project-preview-card-logo-surface {
+  height: min(400px, 42vh);
+  max-height: min(400px, 42vh);
 }
