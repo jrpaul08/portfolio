@@ -14,9 +14,9 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
           <h2 className="projects-title">Featured Projects</h2>
         </div>
         <hr className="projects-divider" />
-        
+
         {/* Chest X-Ray Classification Project */}
-        <div className="project-content">
+        <div className="project-content project-content--balanced">
           <div className="project-info">
             <h3 className="project-title">
               <span className="project-name">MULTI-LABEL CHEST X-RAY</span>
@@ -26,7 +26,7 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
             <p className="project-description">
               Developed a deep learning model for multi-label chest X-ray classification to detect 13 thoracic diseases from medical images. Built with a MobileNetV2 architecture and enhanced through data augmentation, class rebalancing, and dynamic thresholding, the model achieved 62% accuracy and 58% recall despite limited resources, demonstrating a strong starting point for real-world diagnostic support. The system includes bounding box visualizations to highlight abnormalities and a diagnostic report generator summarizing predicted conditions with related symptoms and treatments.
             </p>
-            <p className="project-description" style={{ fontSize: '15px', marginTop: '10px', fontStyle: 'italic' }}>
+            <p className="project-description project-description--note">
               Future improvements include exploring more advanced CNN architectures, expanding the dataset with higher-quality medical images, and incorporating expert feedback from radiologists to enhance clinical reliability.
             </p>
             <div className="project-teaser">
@@ -36,19 +36,30 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
               </a>
             </div>
           </div>
-          <div className="project-dashboard">
-            <img 
-              src="/assets/projects/cxdd/scanalyze_homepage.png" 
-              alt="Chest X-Ray Classification System" 
-              className="project-dashboard-image"
-            />
+          <div className="project-dashboard project-dashboard--preview">
+            <a
+              href="https://chest-scanalyze-ai-frontend.onrender.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-preview-card project-preview-card--link project-preview-card--logo"
+              aria-label="Open Chest Scanalyze AI live demo"
+            >
+              <div className="project-preview-card-logo-surface">
+                <img
+                  src="/assets/projects/cxdd/chest-scanalyze-ai-logo.png"
+                  alt="Chest Scanalyze AI — multi-label chest X-ray classification"
+                  className="project-preview-card-image project-preview-card-image--logo"
+                />
+              </div>
+              <span className="project-preview-card-hint">Open live demo</span>
+            </a>
           </div>
         </div>
 
-        <hr className="projects-divider" style={{ marginTop: '80px', marginBottom: '40px' }} />
+        <hr className="projects-divider projects-divider--spaced" />
 
         {/* RFM Analysis Project */}
-        <div className="project-content">
+        <div className="project-content project-content--balanced">
           <div className="project-info">
             <h3 className="project-title">
               <span className="project-name">RETAIL CUSTOMER</span>
@@ -60,22 +71,30 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
             </p>
             <div className="project-teaser">
               <p className="teaser-text">Dive deeper into the insights.</p>
-              <button className="btn-outline project-cta" onClick={onProjectClick}>View Full Analysis</button>
+              <button type="button" className="btn-outline project-cta" onClick={onProjectClick}>View Full Analysis</button>
             </div>
           </div>
-          <div className="project-dashboard">
-            <img 
-              src="/assets/projects/rfm_analysis_dashboard/dashboard.png" 
-              alt="RFM Analysis Dashboard" 
-              className="project-dashboard-image"
-            />
+          <div className="project-dashboard project-dashboard--preview">
+            <button
+              type="button"
+              className="project-preview-card project-preview-card--action"
+              onClick={onProjectClick}
+              aria-label="View full RFM analysis"
+            >
+              <img
+                src="/assets/projects/rfm_analysis_dashboard/dashboard.png"
+                alt="RFM customer segmentation dashboard preview"
+                className="project-preview-card-image"
+              />
+              <span className="project-preview-card-hint">View full analysis</span>
+            </button>
           </div>
         </div>
 
-        <hr className="projects-divider" style={{ marginTop: '80px', marginBottom: '40px' }} />
+        <hr className="projects-divider projects-divider--spaced" />
 
         {/* NBA Oracle Project */}
-        <div className="project-content">
+        <div className="project-content project-content--balanced">
           <div className="project-info">
             <h3 className="project-title">
               <span className="project-name">NBA ORACLE</span>
@@ -85,12 +104,15 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
               Developed an end-to-end machine learning pipeline to predict NBA game outcomes using historical data from Basketball Reference. Implemented asynchronous web scraping, feature engineering, and time-series modeling on over 3,400 games across three seasons. Trained a Ridge Classifier optimized with sequential feature selection and cross-validation, achieving 71% prediction accuracy. This project demonstrates expertise in data engineering, sports analytics, and time-series machine learning, providing a scalable foundation for real-time game forecasting.
             </p>
           </div>
-          <div className="project-dashboard">
-            <img 
-              src="/assets/projects/nba_oracle/nbaOracle-homepage.png" 
-              alt="NBA Oracle Prediction System" 
-              className="project-dashboard-image"
-            />
+          <div className="project-dashboard project-dashboard--preview">
+            <div className="project-preview-card project-preview-card--static">
+              <img
+                src="/assets/projects/nba_oracle/nbaOracle-homepage.png"
+                alt="NBA Oracle prediction app preview"
+                className="project-preview-card-image"
+              />
+              <span className="project-preview-card-hint project-preview-card-hint--subtle">Application Preview</span>
+            </div>
           </div>
         </div>
       </div>
