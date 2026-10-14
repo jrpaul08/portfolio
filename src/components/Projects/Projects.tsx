@@ -5,6 +5,147 @@ interface ProjectsProps {
   onProjectClick: () => void;
 }
 
+// Preview card on the visual side of a project:
+// 'link' opens an external URL, 'detail' opens the in-app project page, 'static' is image only.
+type ProjectPreview = {
+  type: 'link' | 'detail' | 'static';
+  image: string;
+  alt: string;
+  hint: string;
+  href?: string;
+  ariaLabel?: string;
+  // Renders the image as a centered logo on a solid navy panel
+  logo?: boolean;
+};
+
+type ProjectCta = {
+  teaser: string;
+  label: string;
+  // External URL; when omitted the button opens the in-app project page
+  href?: string;
+};
+
+interface Project {
+  id: string;
+  nameLines: string[];
+  tools: string;
+  description: string;
+  note?: string;
+  cta?: ProjectCta;
+  preview: ProjectPreview;
+}
+
+// To add a project, append an entry here. Image sides alternate automatically.
+const projects: Project[] = [
+  {
+    id: 'chest-xray',
+    nameLines: ['MULTI-LABEL CHEST X-RAY', 'CLASSIFICATION'],
+    tools: 'CNN | Multi-class Classification | Capstone Project',
+    description:
+      'Built a deep learning model that detects 13 thoracic diseases from chest X-rays. Using a MobileNetV2 architecture with data augmentation, class rebalancing, and dynamic thresholding, it reached 62% accuracy and 58% recall on limited resources. The system highlights abnormalities with bounding boxes and generates a diagnostic report summarizing predicted conditions, related symptoms, and treatments.',
+    note:
+      'Next steps: more advanced CNN architectures, higher-quality medical images, and feedback from radiologists to improve clinical reliability.',
+    cta: {
+      teaser: 'Explore the full study detailing model design, training process, and diagnostic evaluation.',
+      label: 'Read the Research Paper',
+      href: '/assets/projects/cxdd/multi-label-chest-xray-classification.pdf',
+    },
+    preview: {
+      type: 'link',
+      href: 'https://chest-scanalyze-ai-frontend.onrender.com/',
+      image: '/assets/projects/cxdd/chest-scanalyze-ai-logo.png',
+      alt: 'Chest Scanalyze AI — multi-label chest X-ray classification',
+      hint: 'Open live demo',
+      ariaLabel: 'Open Chest Scanalyze AI live demo',
+      logo: true,
+    },
+  },
+  {
+    id: 'rfm-analysis',
+    nameLines: ['RETAIL CUSTOMER', 'SEGMENTATION USING RFM ANALYSIS'],
+    tools: 'K-means Clustering | Business Intelligence',
+    description:
+      'Segmented retail customers by Recency, Frequency, and Monetary value to uncover actionable groups. The segments support personalized outreach, retention of high-value customers, early identification of churn risks, and better allocation of marketing spend. Findings and cluster-level KPIs are presented in an interactive dashboard for business stakeholders.',
+    cta: {
+      teaser: 'Dive deeper into the insights.',
+      label: 'View Full Analysis',
+    },
+    preview: {
+      type: 'detail',
+      image: '/assets/projects/rfm_analysis_dashboard/dashboard.png',
+      alt: 'RFM customer segmentation dashboard preview',
+      hint: 'View full analysis',
+      ariaLabel: 'View full RFM analysis',
+    },
+  },
+  {
+    id: 'nba-oracle',
+    nameLines: ['NBA ORACLE'],
+    tools: 'Webscraping | Time-series Modelling | Personal Interest',
+    description:
+      'Built an end-to-end machine learning pipeline that predicts NBA game outcomes from Basketball Reference data. Asynchronously scraped over 3,400 games across three seasons, engineered time-series features, and trained a Ridge Classifier optimized with sequential feature selection and cross-validation, achieving 71% prediction accuracy.',
+    preview: {
+      type: 'static',
+      image: '/assets/projects/nba_oracle/nbaOracle-homepage.png',
+      alt: 'NBA Oracle prediction app preview',
+      hint: 'Application Preview',
+    },
+  },
+];
+
+const PreviewCard: React.FC<{ preview: ProjectPreview; onProjectClick: () => void }> = ({
+  preview,
+  onProjectClick,
+}) => {
+  const image = (
+    <img
+      src={preview.image}
+      alt={preview.alt}
+      className={`project-preview-card-image${preview.logo ? ' project-preview-card-image--logo' : ''}`}
+    />
+  );
+  const content = (
+    <>
+      {preview.logo ? <div className="project-preview-card-logo-surface">{image}</div> : image}
+      <span
+        className={`project-preview-card-hint${preview.type === 'static' ? ' project-preview-card-hint--subtle' : ''}`}
+      >
+        {preview.hint}
+      </span>
+    </>
+  );
+  const logoClass = preview.logo ? ' project-preview-card--logo' : '';
+
+  if (preview.type === 'link') {
+    return (
+      <a
+        href={preview.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`project-preview-card project-preview-card--link${logoClass}`}
+        aria-label={preview.ariaLabel}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  if (preview.type === 'detail') {
+    return (
+      <button
+        type="button"
+        className={`project-preview-card project-preview-card--action${logoClass}`}
+        onClick={onProjectClick}
+        aria-label={preview.ariaLabel}
+      >
+        {content}
+      </button>
+    );
+  }
+
+  return <div className={`project-preview-card project-preview-card--static${logoClass}`}>{content}</div>;
+};
+
 const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
 
   return (
@@ -15,106 +156,50 @@ const Projects: React.FC<ProjectsProps> = ({ onProjectClick }) => {
         </div>
         <hr className="projects-divider" />
 
-        {/* Chest X-Ray Classification Project */}
-        <div className="project-content project-content--balanced">
-          <div className="project-info">
-            <h3 className="project-title">
-              <span className="project-name">MULTI-LABEL CHEST X-RAY</span>
-              <span className="project-name">CLASSIFICATION</span>
-              <span className="project-tools">CNN | Multi-class Classification | Capstone Project</span>
-            </h3>
-            <p className="project-description">
-              Developed a deep learning model for multi-label chest X-ray classification to detect 13 thoracic diseases from medical images. Built with a MobileNetV2 architecture and enhanced through data augmentation, class rebalancing, and dynamic thresholding, the model achieved 62% accuracy and 58% recall despite limited resources, demonstrating a strong starting point for real-world diagnostic support. The system includes bounding box visualizations to highlight abnormalities and a diagnostic report generator summarizing predicted conditions with related symptoms and treatments.
-            </p>
-            <p className="project-description project-description--note">
-              Future improvements include exploring more advanced CNN architectures, expanding the dataset with higher-quality medical images, and incorporating expert feedback from radiologists to enhance clinical reliability.
-            </p>
-            <div className="project-teaser">
-              <p className="teaser-text">Explore the full study detailing model design, training process, and diagnostic evaluation.</p>
-              <a href="/assets/projects/cxdd/multi-label-chest-xray-classification.pdf" target="_blank" rel="noopener noreferrer">
-                <button className="btn-outline project-cta">Read the Research Paper</button>
-              </a>
-            </div>
-          </div>
-          <div className="project-dashboard project-dashboard--preview">
-            <a
-              href="https://chest-scanalyze-ai-frontend.onrender.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-preview-card project-preview-card--link project-preview-card--logo"
-              aria-label="Open Chest Scanalyze AI live demo"
+        {projects.map((project, index) => (
+          <React.Fragment key={project.id}>
+            {index > 0 && <hr className="projects-divider projects-divider--spaced" />}
+
+            <article
+              className={`project-content project-content--balanced${index % 2 === 1 ? ' project-content--reversed' : ''}`}
             >
-              <div className="project-preview-card-logo-surface">
-                <img
-                  src="/assets/projects/cxdd/chest-scanalyze-ai-logo.png"
-                  alt="Chest Scanalyze AI — multi-label chest X-ray classification"
-                  className="project-preview-card-image project-preview-card-image--logo"
-                />
+              <div className="project-info">
+                <h3 className="project-title">
+                  {project.nameLines.map((line) => (
+                    <span key={line} className="project-name">{line}</span>
+                  ))}
+                  <span className="project-tools">{project.tools}</span>
+                </h3>
+                <p className="project-description">{project.description}</p>
+                {project.note && (
+                  <p className="project-description project-description--note">{project.note}</p>
+                )}
+                {project.cta && (
+                  <div className="project-teaser">
+                    <p className="teaser-text">{project.cta.teaser}</p>
+                    {project.cta.href ? (
+                      <a
+                        href={project.cta.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-outline project-cta"
+                      >
+                        {project.cta.label}
+                      </a>
+                    ) : (
+                      <button type="button" className="btn-outline project-cta" onClick={onProjectClick}>
+                        {project.cta.label}
+                      </button>
+                    )}
+                  </div>
+                )}
               </div>
-              <span className="project-preview-card-hint">Open live demo</span>
-            </a>
-          </div>
-        </div>
-
-        <hr className="projects-divider projects-divider--spaced" />
-
-        {/* RFM Analysis Project */}
-        <div className="project-content project-content--balanced">
-          <div className="project-info">
-            <h3 className="project-title">
-              <span className="project-name">RETAIL CUSTOMER</span>
-              <span className="project-name">SEGMENTATION USING RFM ANALYSIS</span>
-              <span className="project-tools">K-means Clustering | Business Intelligence</span>
-            </h3>
-            <p className="project-description">
-              Performed an RFM (Recency, Frequency, Monetary) analysis of retail customer data to uncover actionable customer segments. Through segmentation based on purchasing behavior, RFM analysis enables data-driven marketing decisions; supporting personalized outreach, improved retention of valuable customers, early identification of churn risks, and optimized allocation of marketing efforts to increase profitability. Built an interactive dashboard to present findings and cluster-level KPIs for business stakeholders.
-            </p>
-            <div className="project-teaser">
-              <p className="teaser-text">Dive deeper into the insights.</p>
-              <button type="button" className="btn-outline project-cta" onClick={onProjectClick}>View Full Analysis</button>
-            </div>
-          </div>
-          <div className="project-dashboard project-dashboard--preview">
-            <button
-              type="button"
-              className="project-preview-card project-preview-card--action"
-              onClick={onProjectClick}
-              aria-label="View full RFM analysis"
-            >
-              <img
-                src="/assets/projects/rfm_analysis_dashboard/dashboard.png"
-                alt="RFM customer segmentation dashboard preview"
-                className="project-preview-card-image"
-              />
-              <span className="project-preview-card-hint">View full analysis</span>
-            </button>
-          </div>
-        </div>
-
-        <hr className="projects-divider projects-divider--spaced" />
-
-        {/* NBA Oracle Project */}
-        <div className="project-content project-content--balanced">
-          <div className="project-info">
-            <h3 className="project-title">
-              <span className="project-name">NBA ORACLE</span>
-              <span className="project-tools">Webscraping | Time-series Modelling | Personal Interest</span>
-            </h3>
-            <p className="project-description">
-              Developed an end-to-end machine learning pipeline to predict NBA game outcomes using historical data from Basketball Reference. Implemented asynchronous web scraping, feature engineering, and time-series modeling on over 3,400 games across three seasons. Trained a Ridge Classifier optimized with sequential feature selection and cross-validation, achieving 71% prediction accuracy. This project demonstrates expertise in data engineering, sports analytics, and time-series machine learning, providing a scalable foundation for real-time game forecasting.
-            </p>
-          </div>
-          <div className="project-dashboard project-dashboard--preview">
-            <div className="project-preview-card project-preview-card--static">
-              <img
-                src="/assets/projects/nba_oracle/nbaOracle-homepage.png"
-                alt="NBA Oracle prediction app preview"
-                className="project-preview-card-image"
-              />
-              <span className="project-preview-card-hint project-preview-card-hint--subtle">Application Preview</span>
-            </div>
-          </div>
-        </div>
+              <div className="project-dashboard project-dashboard--preview">
+                <PreviewCard preview={project.preview} onProjectClick={onProjectClick} />
+              </div>
+            </article>
+          </React.Fragment>
+        ))}
       </div>
     </section>
   );

@@ -24,20 +24,6 @@
   color: #D1D5DB;
 }
 
-.add-button {
-  width: 40px;
-  height: 40px;
-  background: #374151;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .projects-divider {
   height: 1px;
   background: #F59E0B;
@@ -61,6 +47,15 @@
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.28fr);
   align-items: center;
   gap: clamp(36px, 4vw, 56px);
+}
+
+/* Every other project puts the preview on the left */
+.project-content--balanced.project-content--reversed {
+  grid-template-columns: minmax(0, 1.28fr) minmax(0, 1.2fr);
+}
+
+.project-content--reversed .project-info {
+  order: 2;
 }
 
 .project-info {
@@ -134,7 +129,9 @@
 }
 
 .project-cta {
+  display: inline-block;
   font-size: 0.8125rem;
+  line-height: 1.2;
   padding: 10px 20px;
 }
 
@@ -284,6 +281,11 @@
   letter-spacing: 0.14em;
 }
 
+/* Zoomed-in view stacks every project; keep text above the preview */
+.App.zoomed-in .project-content--reversed .project-info {
+  order: 0;
+}
+
 @media (max-width: 768px) {
   .projects {
     padding: 56px 0 72px;
@@ -303,9 +305,14 @@
     gap: 36px;
   }
 
-  .project-content--balanced {
+  .project-content--balanced,
+  .project-content--balanced.project-content--reversed {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .project-content--reversed .project-info {
+    order: 0;
   }
 
   .project-description {
