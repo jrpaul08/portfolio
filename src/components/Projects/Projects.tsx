@@ -38,6 +38,21 @@ interface Project {
 // To add a project, append an entry here. Image sides alternate automatically.
 const projects: Project[] = [
   {
+    id: 'reading-buddy',
+    nameLines: ['READING BUDDY'],
+    tools: 'S2S pipeline | open-source LLMs | Context Engineering | Personal Project',
+    description:
+      'Built a voice-driven reading companion that answers questions about a book without spoiling what comes next. Readers pick a classic from a virtual shelf, start a reading session, and ask questions out loud whenever something comes up. Signed-in readers can save their book notes across visits.',
+    preview: {
+      type: 'link',
+      href: 'https://reading-buddy-frontend.vercel.app/',
+      image: '/assets/projects/reading-buddy/reading-buddy-homepage.png',
+      alt: 'Reading Buddy homepage with a shelf of classic novels',
+      hint: 'Open live app',
+      ariaLabel: 'Open Reading Buddy live app',
+    },
+  },
+  {
     id: 'chest-xray',
     nameLines: ['MULTI-LABEL CHEST X-RAY', 'CLASSIFICATION'],
     tools: 'CNN | Multi-class Classification | Capstone Project',
